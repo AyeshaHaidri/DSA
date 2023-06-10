@@ -66,7 +66,7 @@ int main()
     //     cout << k.first << " "<< k.second<<"  " ;
     // }
     //printing using iterator
-    map<int,string> :: iterator it;
+    unordered_map<int,string> :: iterator it;
     for(it=m.begin();it!=m.end();it++)
     {
        cout << (*it).first << " " << (*it).second << endl;
@@ -102,7 +102,7 @@ int main()
     //     cout << k.first << " "<< k.second<<"  " ;
     // }
     //printing using iterator
-    map<int,string> :: iterator it;
+    multimap<int,string> :: iterator it;
     for(it=m.begin();it!=m.end();it++)
     {
        cout << (*it).first << " " << (*it).second << endl;
