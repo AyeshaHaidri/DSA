@@ -1,32 +1,29 @@
-// bubble sort -> comparing adjacent elements and swapping if in wrong order 
+// bubble sort 
+// adjacent elements are compared and then swapped
+// after first iteration the greatest element is at last index and so on
 
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-    int n;
-    cin>>n;
-    int arr[n];
-    for(int i=0;i<n;++i)  
+    int arr[] = {9,12,3,1,987,0,777,43};
+     int n=sizeof(arr)/sizeof(arr[0]);
+    for(int i=0;i<n-1;++i)
     {
-        cin>>arr[i];
-    }
-    for(int a=0;a<n;++a)
-    {
-        for(int b=a+1;b<n;++b)
+        for(int j=0;j<n-i-1;++j)
         {
-            if(arr[a]>arr[b])
+            if(arr[j]>arr[j+1])
             {
-                swap(arr[a],arr[b]);
+                swap(arr[j],arr[j+1]);
             }
         }
     }
-    for(int k :arr)  
+    for(int k : arr)
     {
-        cout<<k<<" ";
+        cout<< k << " ";
     }
     return 0;
 }
 
-//Time Complexity -> O(n^2)
-//Space Complexity -> O(1)
+// Time Complexity -> O(n^2)
+// Space Complexity -> O(1)
