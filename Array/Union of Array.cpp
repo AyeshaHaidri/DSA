@@ -1,6 +1,6 @@
 // Union of two sorted arrays
 
-//Brute force
+// Brute force
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -13,12 +13,11 @@ int n2 = sizeof(arr2)/sizeof(arr2[0]);
 
 set<int> s;
 
-for(int i = 0;i < n1; ++i) // n1
+for(int i = 0;i < n1; ++i) 
 {
-s.insert(arr1[i]); // logn  => n1logn
-}
+s.insert(arr1[i]); 
 
-for(int i = 0; i < n2; ++i)  // n2
+for(int i = 0; i < n2; ++i)  
 {
 s.insert(arr2[i]);  
 }
@@ -40,5 +39,5 @@ return 0;
 }
 
 
-// // // T.C => n1logn + n2logn + (n1 + n2)
-// // // S.C => (n1 + n2) + (n1 + n2)(returning an answer)
+// T.C => n1logn + n2logn + (n1 + n2)
+// S.C => (n1 + n2) + (n1 + n2)
