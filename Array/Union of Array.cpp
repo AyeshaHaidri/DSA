@@ -92,10 +92,7 @@ ans.push_back(arr1[i]);
 }
 i++;
 }
-
-// T.C => o(n1 + n2)
-// S.C => O(n1 + n2)
-
+ 
 for(int ele : ans)
 {
 cout << ele << " ";
@@ -103,3 +100,6 @@ cout << ele << " ";
 
 return 0;
 }
+
+// T.C => o(n1 + n2)
+// S.C => O(n1 + n2)
