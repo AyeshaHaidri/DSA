@@ -1,3 +1,5 @@
+// Brute Force 
+
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -23,3 +25,6 @@ sl = arr[i];
 }
 cout << sl << endl;
 }
+
+// T.C => n + n => O(2n)
+// S.C => O(1)
