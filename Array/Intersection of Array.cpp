@@ -1,3 +1,4 @@
+// Brute Force
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -25,8 +26,6 @@ if(arr2[j] > arr1[i])
 break;
 }
 }
-// T.C  => O(n1 * n2)
-// S.C => O(n2)
 }
 for(int ele : ans)
 {
@@ -34,3 +33,6 @@ cout << ele << " ";
 }
 return 0;
 }
+
+// T.C  => O(n1 * n2)
+// S.C => O(n2)
