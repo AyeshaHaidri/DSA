@@ -3,16 +3,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int factorial(int n);
-
+int factorial(int n); // Declaration of factorial method
 int main() {
-
   int n;
   cin >> n;
   cout << factorial(n);
   return 0;
 }
-
 int factorial(int n) {
   if(n > 1)
   {
