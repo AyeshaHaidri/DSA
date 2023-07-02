@@ -31,9 +31,48 @@ int main ()
     }
   cout << ans << endl;
   return 0;
-
 }
-
-
 // T.C => O(n^2)
 // S.C => O(1)
+
+
+// Optimal Approach
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr[] = {2,2,3,3,1,2,2};
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    int maxi = 0;
+    for(int i = 0; i < n; ++i) 
+    {
+        if(arr[i] > maxi)
+        {
+            maxi = arr[i];
+        }
+    }
+
+    int hsh[maxi + 1];
+
+    for(int i = 0; i < n; ++i) 
+    {
+        hsh[arr[i]]++;
+    }
+
+    int k = sizeof(hsh)/sizeof(hsh[0]);
+
+    for(int i = 1; i <= k; ++i) 
+    {
+        if(hsh[i] > n/2)
+        {
+            cout << i << endl;
+            break;
+        }
+    }
+
+    // T.C => O(3N)
+    // S.C => O(maxi)
+}
+
