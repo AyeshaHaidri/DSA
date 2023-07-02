@@ -76,3 +76,49 @@ int main()
     // S.C => O(maxi)
 }
 
+
+// Moore's voting algorithm
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int> v = {7,7,5,7,5,1,5,7,5,5,7,7,5,5,5,5};
+    int n = v.size();
+    int cnt = 0;
+    int ele;
+
+    for(int i = 0; i < n; ++i)  
+    {
+        if(cnt == 0)
+        {
+            ele = v[i];
+            cnt++;
+        } else if(v[i] == ele)
+        {
+            cnt++;
+        }else{
+            cnt--;
+        }
+    }
+
+    int new_cnt = 0;
+
+    for(int i = 0; i < n; ++i)  
+    {
+        if(v[i] == ele)
+        {
+            new_cnt++;
+        }
+
+        if(new_cnt > n/2)
+        {
+            cout << ele << endl;
+        }
+    }
+
+    // T.C => O(2N)
+    // S.C => O(1)
+    return 0;
+}
+
