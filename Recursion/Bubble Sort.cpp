@@ -21,7 +21,7 @@ sortArr(arr,n-1);
 int main()
 {
 int arr[] = {5,2,4,7,8};
-int n = 5;
+int n = sizeof(arr)/sizeof(arr[0]);
 
 sortArr(arr,n);
 
@@ -32,3 +32,5 @@ cout << e << " ";
 return 0;
 }
 
+// Time Complexity -> O(n^2)
+// Space Complexity -> O(1)
