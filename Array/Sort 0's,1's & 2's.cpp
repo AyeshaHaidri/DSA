@@ -72,3 +72,51 @@ return 0;
 
 // T.C => O(n + n) => O(2n) => O(n)
 // S.C => O(1)
+
+
+// Dutch national flag algorithm (DNF)
+
+// 3 pointers
+// low,mid,high
+// if(arr[mid] == 0)
+// swap(arr[low],arr[mid]),low++,mid++
+// if(arr[mid] == 1)
+// mid++;
+// if(arr[mid] == 2)
+// swap(arr[mid],arr[high]),high--
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{                                    
+int arr[] = {0,1,0,2,1,1,2,1,0,2,1,2,0,2};
+int n = sizeof(arr)/sizeof(arr[0]);
+
+int low = 0;
+int mid = 0;
+int high = n - 1;
+
+for(int i = 0; i < n; ++i)  
+{
+if(arr[mid] == 0){
+swap(arr[low],arr[mid]);
+low++;
+mid++;
+}else if(arr[mid] == 1)
+{
+mid++;
+}else if(arr[mid] == 2)
+{
+swap(arr[mid],arr[high]);
+high--;
+}
+}
+for(int e : arr)
+{
+cout << e << " ";
+}
+return 0;
+}
+
+// T.C => O(n)
+// S.C=> O(1)
