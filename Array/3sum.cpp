@@ -46,3 +46,47 @@ int main()
     // S.C => O(one triplet) + O(no. of triplets)
     return 0;
 }
+
+// optimal approach
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr[] = {-1,0,1,2,-1,4};
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    vector<int> temp;
+    set<vector<int>> st;
+
+    for(int i = 0; i < n; ++i) // O(n)
+    {
+        set<int> s;
+        for(int j = i + 1; j < n; ++j) // O(n)
+        {
+            int third = -(arr[i] + arr[j]);
+            if(s.find(third) != s.end()){  // O(logn)
+                temp.push_back(arr[i]);
+                temp.push_back(arr[j]);
+                temp.push_back(third);
+                sort(temp.begin(),temp.end());
+                st.insert(temp);
+                temp.clear();
+            }
+            s.insert(arr[j]);  // O(j*logn)
+        }
+    }
+
+    for(auto it : st)
+    {
+        for(auto k : it)
+        {
+            cout << k << " ";
+        }
+        cout << endl;
+    }
+
+    // T.C => O(n^nlogn) => O(n^2)
+    // S.C => O(no. of triplets) * 2 + O(j)
+    return 0;
+}
+
