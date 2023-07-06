@@ -102,3 +102,80 @@ int main()
 }
 
 
+// 2 Pointers
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr[] = {1,0,-1,0,-2,2};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    sort(arr,arr+n);
+
+    vector<int> temp;
+    vector<vector<int>> ans;
+
+    for(int i = 0; i < n; ++i)  // O(n)
+    {
+        if(i > 0 && arr[i] == arr[i-1]){
+            continue;
+        }
+        for(int j = i + 1; j < n; ++j)
+        {
+            if(j == i + 1 && arr[j] == arr[j-1]){
+                continue;
+            }
+
+            int k = j + 1;
+            int l = n - 1;
+
+            while(k < l)
+            {
+                int sum = arr[i] + arr[j];
+                sum+=arr[k];
+                sum+=arr[l];
+
+                if(sum < 0)
+                {
+                    k++;
+                }else if(sum > 0)
+                {
+                    l--;
+                }else{
+                    temp.push_back(arr[i]);
+                    temp.push_back(arr[j]);
+                    temp.push_back(arr[k]);
+                    temp.push_back(arr[l]);
+                    ans.push_back(temp);
+                    temp.clear();
+                    k++;
+                    l--;
+                    while(k < l && arr[k] == arr[k-1])
+                    {
+                        k++;
+                    }
+                    while(k < l && arr[l] == arr[l+1])
+                    {
+                        l--;
+                    }
+                }
+            }
+
+        }
+       
+    }
+
+    // T.C => O(n^3) + nlogn
+    // S.C => (one quadruplet)
+
+    for(auto triplet : ans)
+    {
+        for(auto k : triplet){
+            cout << k << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+
