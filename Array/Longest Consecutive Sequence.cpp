@@ -1,4 +1,4 @@
-// longest consecutive sequence
+// find longest consecutive sequence in an array
 
 // Brute Force
 
@@ -73,6 +73,7 @@ int main()
     }
 
     cout << longest << endl;
+    return 0;
 }
 
     // T.C => O(N) + O(nlogn)
