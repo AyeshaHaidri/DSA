@@ -14,7 +14,6 @@ int main()
 }
 
 // unset the ith bit
-
 #include<bits/stdc++.h>
 using namespace std;
 int main()
