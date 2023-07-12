@@ -1,3 +1,5 @@
+// Print the matrix in spiral form
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -46,7 +48,6 @@ vector<int> spiral(vector<vector<int>> &matrix)
         }
 
     }
-
     return ans;
 }
 
@@ -67,7 +68,7 @@ int main()
     {
         cout << ele << " ";
     }
-    cout << endl;
     return 0;
 }
+
  // T.C => O(n^2)
