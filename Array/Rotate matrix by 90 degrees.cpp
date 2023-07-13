@@ -1,3 +1,5 @@
+//Rotate the matrix of array by 90 degrees to the right
+
 //Brute Force
 
 #include<bits/stdc++.h>
@@ -28,8 +30,7 @@ int main()
         {9,10,11,12},
         {13,14,15,16}
     };
-
-
+    
     vector<vector<int>> ans = rotate(matrix);
 
     for(auto it : ans)
@@ -40,8 +41,8 @@ int main()
         }
         cout << endl;
     }
-
-    // T.C => O(n^2)
-    // S.C => O(n^2)
     return 0;
 }
+
+ // T.C => O(n^2)
+ // S.C => O(n^2)
