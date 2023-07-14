@@ -80,7 +80,6 @@ int main()
         {13,14,15,16}
     };
 
-
     rotate(matrix);
 
     for(auto it : matrix)
@@ -91,11 +90,12 @@ int main()
         }
         cout << endl;
     }
+    return 0;
+}
+
 
     // T.C => O(n*n) + O(n*n/2) => O(n^2)
     // S.C => O(1)
 
-    return 0;
-}
 
 
