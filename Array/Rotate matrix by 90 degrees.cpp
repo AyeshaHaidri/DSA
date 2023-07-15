@@ -1,5 +1,4 @@
 //Rotate the matrix of array by 90 degrees to the right
-
 //Brute Force
 
 #include<bits/stdc++.h>
@@ -18,7 +17,6 @@ vector<vector<int>> rotate(vector<vector<int>> &matrix)
             ans[j][n-i-1] = matrix[i][j];
         }
     }
-
     return ans;
 }
 
@@ -63,14 +61,12 @@ void rotate(vector<vector<int>> &matrix){
             swap(matrix[i][j],matrix[j][i]);
         }
     }
-
     for(int i = 0; i < n; ++i)  // O(n)
     {
         reverse(matrix[i].begin(),matrix[i].end()); // O(n/2)
     }
 
 }
-
 int main()
 {
     vector<vector<int>> matrix = {
@@ -92,7 +88,6 @@ int main()
     }
     return 0;
 }
-
 
     // T.C => O(n*n) + O(n*n/2) => O(n^2)
     // S.C => O(1)
