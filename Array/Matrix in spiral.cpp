@@ -2,12 +2,10 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-
 vector<int> spiral(vector<vector<int>> &matrix)
 {
     int n = matrix.size();
     int m = matrix[0].size();
-
     int top = 0;
     int left = 0;
     int right = m - 1;
@@ -22,7 +20,6 @@ vector<int> spiral(vector<vector<int>> &matrix)
             ans.push_back(matrix[top][i]);
         }
         top++;
-
         for(int i = top; i <= bottom; ++i)
         {
             ans.push_back(matrix[i][right]);
