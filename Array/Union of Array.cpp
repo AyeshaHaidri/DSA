@@ -30,7 +30,6 @@ for(it = s.begin(); it != s.end(); it++)
 uni[i] = (*it);
 i++;
 }
-
 for(int ele : uni)
  {
  cout << ele << " ";
@@ -38,12 +37,10 @@ for(int ele : uni)
 return 0;
 }
 
-
 // T.C => n1logn + n2logn + (n1 + n2)
 // S.C => (n1 + n2) + (n1 + n2)
 
 // Optimized Approach
-
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -92,12 +89,10 @@ ans.push_back(arr1[i]);
 }
 i++;
 }
- 
 for(int ele : ans)
 {
 cout << ele << " ";
 }
-
 return 0;
 }
 
