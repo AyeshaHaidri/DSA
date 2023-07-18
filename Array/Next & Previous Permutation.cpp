@@ -2,6 +2,7 @@
 
 #include<bits/stdc++.h>
 using namespace std;
+
 int main()
 {
     int arr[] = {2,1,5,4,3,0,0};
