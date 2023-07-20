@@ -1,11 +1,11 @@
 // Brute Force
 #include<bits/stdc++.h>
 using namespace std;
+
 int main()
 {
 int arr1[] = {1,2,2,3,3,4,4,5,5,6,7};
 int n1 = sizeof(arr1)/sizeof(arr1[0]);
-
 int arr2[] = {2,3,3,5,6,6,7,8};
 int n2 = sizeof(arr2)/sizeof(arr2[0]);
 
