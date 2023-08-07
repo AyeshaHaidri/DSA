@@ -1,6 +1,5 @@
 // Maximum element in array
-
-// Brute Force Approach
+// Brute Force 
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -16,7 +15,6 @@ return 0;
 // Time complexity -> O(nlogn)
 
 // Optimized Approach
-
 #include<bits/stdc++.h>
 using namespace std;
 int main()
