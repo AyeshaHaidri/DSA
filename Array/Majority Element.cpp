@@ -1,8 +1,9 @@
 //  find the majority element in an array
 //  arr = [1,3,1,5,4,1,1,1]
-//  majority element-> (>n/2) , ans = 1
+//  majority element -> (>n/2) , ans = 1
 
 //  Brute Force
+
 #include <bits/stdc++.h>
 using namespace std;
 int main ()
@@ -30,6 +31,7 @@ int main ()
   cout << ans << endl;
   return 0;
 }
+
 // T.C => O(n^2)
 // S.C => O(1)
 
