@@ -12,13 +12,10 @@ int main()
       {
 	if (arr[j] < arr[j - 1])
 	  {
-	    swap (arr[j], arr[j - 1]);
-	  }
-	else
-	  {
-	    break;
+	    arr[j+1]=arr[j];
 	  }
       }
+	   arr[j]=temp;
    }
     for(int k : arr)
     {
