@@ -64,3 +64,5 @@ return 0;
 
 // Time complexity -> N(logn) 
 // Space Complexity -> O(n)
+
+// In this sorting technique vector is used for storing the values temporarily but we can also use an array instead of vector.
