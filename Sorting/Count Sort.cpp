@@ -27,7 +27,7 @@ void Countsort(int *input_array,int size,int range)
     }
 	
     // placing input array elements into output array in proper
-    //  positions such that the result is a sorted array in ASC order
+    // positions such that the result is a sorted array in ASC order
     for(int i=0;i<size;++i)        //O(size)
     {
         output_array[--count_array[input_array[i]]]=input_array[i];
@@ -51,3 +51,6 @@ int main()
     }
     return 0;
 }
+
+// T.C. -> O(size+range) -> O(n+k)
+// S.C. -> O(size+range) -> O(n+k)
