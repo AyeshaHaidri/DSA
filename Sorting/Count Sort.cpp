@@ -39,12 +39,15 @@ void Countsort(int *input_array,int size,int range)
         input_array[i]=output_array[i];
     }
 }
+
 int main()
 {
     int size=8;
     int range=10;
     int input_array[size]={5,4,2,1,3,9,8,7};
+	
     Countsort(input_array,size,range);
+	
     for(int i=0;i<size;++i)
     {
       cout<<input_array[i]<<" ";
