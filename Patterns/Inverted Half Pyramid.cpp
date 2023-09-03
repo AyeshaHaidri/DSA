@@ -1,9 +1,9 @@
+ //inverted half pyramid using *
+
 #include<bits/stdc++.h>
 using namespace std;
 int main()
 { 
-   
-   //inverted half pyramid
     int n;
     cin>>n;
     for(int row=0;row<n;row++)
