@@ -1,4 +1,5 @@
 //hollow numeric half inverted pyramid
+
 #include<bits/stdc++.h>
 using namespace std;
 int main()
@@ -13,7 +14,7 @@ int main()
             {
                 cout<<col+1<<" ";
             }
-            else if(col==0)   //important line
+            else if(col==0)      //important line
             {
                 cout<<row+1<< " ";
             }
@@ -33,6 +34,7 @@ int main()
     
     return 0;
 }
+
 
 // T.C. -> O(n^2)
 // S.C. -> O(1)
