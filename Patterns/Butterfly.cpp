@@ -1,19 +1,36 @@
 // Butterfly Pattern
 
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
-int main()
+
+int
+main ()
 {
-    int n;
-    cin>>n;
-    for(int row=0;row<n;row++)
+  int r, i, j;
+  cout << "Enter no. of rows: ";
+  cin >> r;
+
+  for (i = 1; i <= r; i++)
     {
-        for(int col=0;col<row+1;col++)
-        {
-            cout<<*<<" ";
-        }
-        cout<<endl;
+      for (j = 1; j <= i; j++)
+	cout << "*";
+      for (j = 1; j <= 2 * (r - i); j++)
+	cout << " ";
+      for (j = 1; j <= i; j++)
+	cout << "*";
+      cout << "\n";
     }
-    return 0;
+  for (i = r; i >= 1; i--)
+    {
+      for (j = 1; j <= i; j++)
+	cout << "*";
+      for (j = 1; j <= 2 * (r - i); j++)
+	cout << " ";
+      for (j = 1; j <= i; j++)
+	cout << "*";
+      cout << "\n";
+    }
+  return 0;
 }
+
 
