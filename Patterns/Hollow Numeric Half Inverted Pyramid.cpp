@@ -1,7 +1,8 @@
-//hollow numeric half inverted pyramid
+// hollow numeric half inverted pyramid
 
 #include<bits/stdc++.h>
 using namespace std;
+
 int main()
 {
     int n;
