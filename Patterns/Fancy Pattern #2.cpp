@@ -19,7 +19,8 @@ int main()
         }
         cout<<endl;
     }
-     for(int row=1;row<n;row++)  //important line 
+
+     for(int row=1;row<n;row++)      //important line 
     {
         for(int col=0;col<2*n-2*row-1;col++)
         {
@@ -32,8 +33,10 @@ int main()
         }
         cout<<endl;
     }
+    
     return 0;
 }
+
 
 // T.C. -> O(n^2)
 // S.C. -> O(1)
