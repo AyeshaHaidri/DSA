@@ -1,4 +1,4 @@
-// diamond pattern
+// diamond pattern full 
 
 #include<bits/stdc++.h>
 using namespace std;
