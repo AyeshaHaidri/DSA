@@ -2,8 +2,10 @@
 
 #include<bits/stdc++.h>
 using namespace std;
+
  int main()
 {
+ 
     int n;
     cin>>n;
     for(int row=0;row<n;row++)
@@ -23,5 +25,6 @@ using namespace std;
         cout<<endl;
     }
      return 0;
+ 
 }
     
