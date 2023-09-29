@@ -2,6 +2,7 @@
 
 #include<bits/stdc++.h>
 using namespace std;
+
 vector<int> spiral(vector<vector<int>> &matrix)
 {
     int n = matrix.size();
