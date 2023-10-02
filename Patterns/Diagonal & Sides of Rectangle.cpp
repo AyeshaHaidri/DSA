@@ -1,6 +1,6 @@
-#Diagonal and sides of a rectangle
+# Diagonal and sides of a rectangle
 
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
 int main()
@@ -17,7 +17,7 @@ cout << "*";
 else
 cout << " ";
 }
-cout << "\n";
+cout << "endl";
 }
   
 return 0;
