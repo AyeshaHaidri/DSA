@@ -53,3 +53,6 @@
     cout << "Sorted array is \n";
     printArray(arr, n);
   }
+
+// TC O(nlogn)
+// SC O(1)
