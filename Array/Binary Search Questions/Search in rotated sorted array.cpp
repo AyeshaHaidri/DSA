@@ -4,7 +4,7 @@
 using namespace std;
 int binarySearch(vector<int> &v,int s,int e,int target)
 {
-    int mid=e+(s-e)/2;
+    int mid=s+(e-s)/2;
     while(s<=e)
     {
     if(v[mid]==target)
@@ -19,13 +19,13 @@ int binarySearch(vector<int> &v,int s,int e,int target)
     else{
         s=mid+1;
     }
-    mid=e+(s-e)/2;
+    mid=s+(e-s)/2;
     }
     return -1;
 }
 int pivotElement(vector<int> &v,int s,int e, int n)
 {
-    int mid=(e+s)/2;
+    int mid=s+(e-s)/2;
     while(e>=s)
     {
         if(s==e)
@@ -51,7 +51,7 @@ int pivotElement(vector<int> &v,int s,int e, int n)
         else{
             s=mid+1;
         }
-        mid=(e+s)/2;
+        mid=s+(e-s)/2;
     }
     return -1;
 }
@@ -77,3 +77,4 @@ int main()
 }
 
 TC -> O(logn)
+SC ->O(1)
