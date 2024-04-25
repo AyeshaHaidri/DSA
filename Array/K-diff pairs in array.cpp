@@ -71,3 +71,50 @@ int main()
 // SC -> O(n)
 
 
+// Another Approach
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int binarySearch(vector<int> &nums,int target,int s){
+            int e=nums.size()-1;
+            int mid=s+(e-s)/2;
+            while(s<=e)
+            {
+                if(nums[mid]==target)
+                {
+                    return mid;
+                }
+                else if(nums[mid]>target)
+                {
+                    e=mid-1;
+                }
+                else {
+                    s=mid+1;
+                }
+                 mid=s+(e-s)/2;
+            }
+            return -1;
+        }
+
+int main()
+{
+    vector<int> nums={3,4,2,1,1,9,10};
+    int k=2;
+    set<pair<int,int>> ans;
+        int n=nums.size();
+        sort(nums.begin(),nums.end());
+        for(int i=0;i<n;i++)
+        {
+             if(binarySearch(nums,nums[i]+k,i+1) !=-1)
+            {
+                ans.insert({nums[i],k+nums[i]});
+            }
+        }
+        cout<< ans.size();
+}
+
+
+// TC -> O(nlogn)
+// SC -> O(n)
+
