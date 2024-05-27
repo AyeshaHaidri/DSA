@@ -9,28 +9,44 @@ int main()
 {
     vector<int> v={1,1,2,2,3,3,7,7,5,5,4,4,6,6,9};
     int n=v.size();
-    int s=0; int e=n-1;
-    int mid=s+(e-s)/2;
-    while(e>=s)
-    {
-        if(mid%2==0 && v[mid]==v[mid+1] || mid%2 != 0 && v[mid]==v[mid-1])
+        int l=0;
+        int h=n-1;
+        int mid=l+(h-l)/2;
+        int ans=0;
+        while(l<=h)
         {
-            s=mid+1;
+            if(l==h){
+                ans=v[l];
+                break;
+            }
+            if(mid % 2 == 0) // even
+            {
+                if(v[mid] == v[mid+1] && mid+1<n)
+                {
+                    l=mid+2;
+                }
+                else if(v[mid]==v[mid-1] && mid-1>=0){
+                    h=mid-2;
+                }
+                else
+                {
+                    ans=v[mid];
+                    break;
+                }
+            }
+            else{ //odd
+                if(v[mid]==v[mid+1] && mid+1<n)
+                {
+                    h=mid-1;
+                }
+                else if(v[mid]==v[mid-1] && mid-1>=0)
+                {
+                    l=mid+1;
+                }
+            }
+            
+            mid=l+(h-l)/2;
         }
-        else if(mid%2==0 && v[mid]==v[mid-1] || mid%2 != 0 && v[mid]==v[mid+1])
-        {
-            e=mid-1;
-        }
-        else if(mid%2==0 && v[mid-1]!=v[mid] && v[mid+1]!=v[mid])
-        {
-            cout<<v[mid] << " at index "<< mid;
-            break;
-        }
-        else if(s==e)
-        {
-            cout<<v[mid]<< " at index "<< mid;
-            break;
-        }
-        mid=s+(e-s)/2;
+        cout<<ans;
     }
 }
