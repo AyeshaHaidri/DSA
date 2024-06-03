@@ -34,3 +34,6 @@ int main()
     bool ans=validPalindrome(s);
     cout<<ans;
 }
+
+TC -> O(n)
+SC -> O(1)
