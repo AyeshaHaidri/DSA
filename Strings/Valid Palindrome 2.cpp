@@ -42,3 +42,6 @@ int main()
     bool ans=validPalindrome(s);
     cout<<ans;
 }
+
+TC -> O(n^2)
+SC -> O(1)
