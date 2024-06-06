@@ -3,7 +3,7 @@ using namespace std;
 
     string decodeMessage(string key, string message) {
 
-        char mapp[280]={0};
+        char mapp[280]={0};  // why we cannot take vector because it has dynamic memory allocation and mapping uses the ascii value of characters to store and access the values 
         char start='a';
         string ans="";
          
