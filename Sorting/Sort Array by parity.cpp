@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// sorted using the custom comparator 
 
 bool myComp(int &a,int &b)
 {
