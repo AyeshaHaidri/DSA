@@ -76,3 +76,6 @@ int main()
     int totalTime=garbageCollection(garbage,travel);
     cout<<totalTime<<endl;
 }
+
+// TC -> O(m*n)
+// SC -> O(1)
