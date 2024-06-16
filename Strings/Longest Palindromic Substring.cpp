@@ -14,6 +14,7 @@ string expand(string &s,int i,int j)
 }
     string countSubstrings(string s) {
         string ans="";
+        
         for(int center=0;center<s.length();center++)
         {
             string evenSubs=expand(s,center,center);
