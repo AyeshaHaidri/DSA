@@ -29,3 +29,6 @@ int main()
    int ans=numberOfBeams(bank);
    cout<<ans<<endl;
 }
+
+// TC-> O(m*n) 
+// SC-> O(1)
