@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+ni#include <bits/stdc++.h>
 using namespace std;
 
 string reverseVowels(string s) {
@@ -33,6 +33,7 @@ int main()
    string ans=reverseVowels(s);
    cout<<ans<<endl;
 }
+
 
 // TC -> O(n)
 // SC -> O(1)
