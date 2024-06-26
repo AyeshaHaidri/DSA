@@ -31,7 +31,7 @@ main ()
 }
 
 // Time complexity -> O(log(min(a,b)))
-
+// we can also use the formula hcf(a-b,b) if a>b and hcf(b-a,a) if b>a
 
 // Another method for calculating gcd 
 
