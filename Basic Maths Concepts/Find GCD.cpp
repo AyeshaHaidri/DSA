@@ -44,8 +44,5 @@ int main ()
   int gcd = __gcd (a, b);	// Stl inbuilt function for calculating gcd
   cout << "GCD is :" << " ";
   cout << gcd << endl;
-  int lcm = (a * b) / gcd;	//Finding Lowest Common Divisor
-  cout << "LCM is :" << " ";
-  cout << lcm << endl;
   return 0;
 }
